@@ -1,13 +1,13 @@
 import React, { Component } from 'react';
 import { HeaderNav } from '../components'
-import ContentLayout from './ContentLayout'
+import HomeLayout from './HomeLayout'
 
 class App extends Component {
   render() {
     return (
       <div className="App">
         <HeaderNav />
-        <ContentLayout />
+        <HomeLayout />
       </div>
     );
   }

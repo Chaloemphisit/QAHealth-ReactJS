@@ -5,7 +5,7 @@ import {
 } from 'reactstrap';
 import { SearchPanel, QuestionList } from '../components'
 
-export default class ContentLayout extends React.Component {
+export default class HomeLayout extends React.Component {
   render() {
     return (
       <Container>
