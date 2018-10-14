@@ -1,7 +1,7 @@
 import React from 'react'
 import { Switch, Route } from 'react-router-dom'
 
-import {Home} from '../containers'
+import {Home, Page404} from '../containers'
 
 const Ask = () => <h1 className="ml-auto">อย่าพึ่งรีบดูสิ!!....กำลังทำอยู่</h1>
 const ContactUs = () => <h1 >อย่าพึ่งรีบดูสิ!!....กำลังทำอยู่</h1>
@@ -13,5 +13,6 @@ export default () => (
     <Route exact path="/ask" component={Ask} />
     <Route exact path="/contactus" component={ContactUs} />
     <Route exact path="/login" component={LoginSignup} />
+    <Route component={Page404} />
   </Switch>
 )
