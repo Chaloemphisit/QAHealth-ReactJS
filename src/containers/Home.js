@@ -8,7 +8,8 @@ import { SearchPanel, QuestionTabs } from '../components'
 export default class Home extends React.Component {
   render() {
     return (
-      <div>
+      // Show Div Full Page => container-fluid
+      <div className="container"> 
         <Row>
           <Col xs="12"><SearchPanel /></Col>
         </Row>

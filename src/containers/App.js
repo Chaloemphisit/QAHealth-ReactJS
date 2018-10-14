@@ -53,7 +53,7 @@ class App extends Component {
             </Nav>
           </Collapse>
         </Navbar>
-        <div className="container-fluid" xs="12" md="8">
+        <div>
           <Routing />
         </div>
 

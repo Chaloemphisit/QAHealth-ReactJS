@@ -1,23 +1,81 @@
-/* Top bar Logo */
+html,
+body {
+    height: 100%;
+    margin: 0;
+}
 
+/* Question List*/
+
+.question-header {
+    color: #17A2B8
+}
+
+.question-header:hover {
+    color: #008394;
+    text-decoration: none;
+}
+
+.question-body {
+    color: #9E9E9E
+}
+
+.question-body:hover {
+    color: #828282;
+    text-decoration: none;
+}
+
+
+/* Top bar Logo */
 .navbar-default {
     background-color: #008394;
     /* border-color: #E7E7E7; */
+
 }
+
+/* Rounded Button */
+
+a.button3 {
+    display: inline-block;
+    padding: 0.3em 1.2em;
+    margin: 0 0.3em 0.3em 0;
+    border-radius: 2em;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    color: #FFFFFF;
+    background-image: linear-gradient(to right, #fa709a 0%, #fee140 100%);
+    text-align: center;
+    transition: all 0.2s;
+}
+
+a.button3:hover {
+    background-color: #4095c6;
+}
+
+@media all and (max-width:30em) {
+    a.button3 {
+        display: block;
+        margin: 0.2em auto;
+    }
+}
+
+/*  */
 
 /* 404Page */
 
 #main {
     display: table;
     width: 100%;
-    height: 60vh;
+    height: 87.5vh;
+    background-image: linear-gradient(to bottom, #a8edea 0%, #fed6e3 100%);
     text-align: center;
 }
 
 .fof {
     display: table;
     width: 100%;
-    height: 60vh;
+    height: auto;
     text-align: center;
     font-family: 'Lato', sans-serif;
     color: #888;
