@@ -1,9 +1,8 @@
 import React from 'react';
 import {
-  Container, Row, Col, Card, Button, CardHeader, CardFooter, CardBody,
-  CardTitle, CardText
+  Container, Row, Col, Card,CardBody
 } from 'reactstrap';
-import { SearchPanel, QuestionList } from '../components'
+import { SearchPanel, QuestionTabs } from '../components'
 
 export default class HomeLayout extends React.Component {
   render() {
@@ -26,7 +25,7 @@ export default class HomeLayout extends React.Component {
 
             <Card>
               <CardBody>
-                  <QuestionList />
+                  <QuestionTabs />
               </CardBody>
             </Card>
 

@@ -1,8 +1,10 @@
 import React from 'react';
-import { TabContent, TabPane, Nav, NavItem, NavLink, Card, Button, CardTitle, CardText, Row, Col } from 'reactstrap';
+import { TabContent, TabPane, Nav, NavItem, NavLink } from 'reactstrap';
 import classnames from 'classnames';
+import QuestionsList from './QuestionsList'
 
-export default class QuestionList extends React.Component {
+
+export default class QuestionTabs extends React.Component {
     constructor(props) {
         super(props);
 
@@ -50,22 +52,13 @@ export default class QuestionList extends React.Component {
                 </Nav>
                 <TabContent activeTab={this.state.activeTab}>
                     <TabPane tabId="1">
-                        <Card body>
-                            <CardTitle>มีอาการ กกกกกกกก</CardTitle>
-                            <CardText>มีรายละเอียดดดดดดดดดดดดดดดดดดดดดดดดด....</CardText>
-                            <Button color="info">อ่านเพิ่มเติม</Button>
-                        </Card>
-                        <Card body>
-                            <CardTitle>ปวดหัว ตัวร้อนนนนนนนนนนนนนนนนนนนนนน</CardTitle>
-                            <CardText>มีรายละเอียดดดดดดดดดดดดดดดดดดดดดดดดด....</CardText>
-                            <Button color="info">อ่านเพิ่มเติม</Button>
-                        </Card>
+                        <QuestionsList />
                     </TabPane>
                     <TabPane tabId="2">
-
+                        <QuestionsList />
                     </TabPane>
                     <TabPane tabId="3">
-
+                        <QuestionsList />
                     </TabPane>
                 </TabContent>
             </div>
