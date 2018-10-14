@@ -34,7 +34,7 @@ class App extends Component {
           <div className="top-logo">QA Health Logo</div>
         </Navbar>
         <Navbar dark expand="md" color="info" >
-          <NavbarBrand href="/">QA Health</NavbarBrand>
+        <Link exact to="/" className="link-none-underline"><NavbarBrand>QA Health</NavbarBrand></Link>
           <NavbarToggler onClick={this.toggle} />
           <Collapse isOpen={this.state.isOpen} navbar>
             <Nav className="ml-auto" navbar>

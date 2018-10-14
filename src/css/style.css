@@ -32,8 +32,19 @@ body {
 
 }
 
+.link-none-underline{
+    color: #FFFFFF;
+}
+.link-none-underline:hover{
+    color: #FFFFFF;
+    text-decoration: none;
+}
+
 /* Rounded Button */
 .back404page {
+    color: #FFFFFF;
+  }
+  .back404page:hover{
     color: #FFFFFF;
     text-decoration: none;
   }
