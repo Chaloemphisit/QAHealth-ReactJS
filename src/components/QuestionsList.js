@@ -6,7 +6,7 @@ export default class QuestionsList extends React.Component {
     return (
       <ListGroup>
         <ListGroupItem tag="a" href="#">
-          <ListGroupItemHeading href="#">หัวข้อคำถามทดสอบ 1<Badge pill>ตอบแล้ว 14</Badge></ListGroupItemHeading>
+          <ListGroupItemHeading  href="#">หัวข้อคำถามทดสอบ 1<Badge pill> ตอบแล้ว 14</Badge></ListGroupItemHeading>
 
           <ListGroupItemText href="#">
             มีอาการ กกกกกกกกกกกกกกกกกกกกกกกกกกกกกกกกกกกกกกกกกกกกกกกกกกกกกกกกกกกกกกกกกกกกก

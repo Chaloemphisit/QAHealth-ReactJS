@@ -1,18 +1,22 @@
 import React from 'react';
-import { Jumbotron, InputGroup, InputGroupAddon, Button, Input, Container } from 'reactstrap';
+import { Jumbotron, Container } from 'reactstrap';
 
 const SearchPanel = (props) => {
   return (
     <div>
-      <Jumbotron fluid>
+      <Jumbotron fluid class="align-items-center">
         <Container fluid>
-          <div>
-            <InputGroup>
-              <Input placeholder="อาการแบบนี้ถือเป็น bipolar หรือไม่..." />
-              <InputGroupAddon addonType="append">
-                <Button color="info">ค้นหา</Button>
-              </InputGroupAddon>
-            </InputGroup>
+          <div >
+            <fieldset className="field-container">
+              <input type="text" placeholder="อาการแบบนี้ถือเป็น bipolar หรือไม่..." className="field" />
+              <div className="icons-container">
+                <div className="icon-search"></div>
+                <div className="icon-close">
+                  <div className="x-up"></div>
+                  <div className="x-down"></div>
+                </div>
+              </div>
+            </fieldset>
           </div>
         </Container>
       </Jumbotron>

@@ -1,4 +1,7 @@
 import React from 'react';
+import { Link } from 'react-router-dom'
+import Routing from '../routes'
+
 import {
   Collapse,
   Navbar,
@@ -6,7 +9,8 @@ import {
   NavbarBrand,
   Nav,
   NavItem,
-  NavLink} from 'reactstrap';
+  NavLink
+} from 'reactstrap';
 
 export default class HeaderNav extends React.Component {
   constructor(props) {
@@ -31,17 +35,21 @@ export default class HeaderNav extends React.Component {
           <Collapse isOpen={this.state.isOpen} navbar>
             <Nav className="ml-auto" navbar>
               <NavItem>
-                <NavLink active={window.location.pathname === '/' } href="/">หน้าหลัก</NavLink>
+                <Link exact to="/"><NavLink active={window.location.pathname === '/'} >หน้าหลัก</NavLink></Link>
               </NavItem>
               <NavItem>
-                <NavLink active={window.location.pathname === '/ask' } href="/ask">ถามหมอ</NavLink>
+                <Link to="/ask" ><NavLink active={window.location.pathname === '/ask'} >ถามหมอ</NavLink></Link>
               </NavItem>
               <NavItem>
-                <NavLink active={window.location.pathname === '/contactus' } href="/contactus">ติดต่อเรา</NavLink>
+                <Link to="/contactus"><NavLink active={window.location.pathname === '/contactus'} >ติดต่อเรา</NavLink></Link>
+              </NavItem>
+              <NavItem>
+                <Link to="/login"><NavLink active={window.location.pathname === '/login'} >Login/Signup</NavLink></Link>
               </NavItem>
             </Nav>
           </Collapse>
         </Navbar>
+          <Routing />
       </div>
     );
   }
