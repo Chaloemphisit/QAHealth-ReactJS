@@ -56,7 +56,7 @@ export default class Ask extends React.Component {
                 <Col md={3}>
                   <FormGroup>
                     <Label for="exampleState">น้ำหนัก (กก.)</Label>
-                    <Input type="text" name="state" id="weight" />
+                    <Input type="text" name="weight" id="weight" />
                   </FormGroup>
                 </Col>
                 <Col md={3}>

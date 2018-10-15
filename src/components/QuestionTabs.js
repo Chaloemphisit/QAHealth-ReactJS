@@ -7,7 +7,6 @@ const styles = {
     // textAlign: "center"
 };
 
-
 export default class QuestionTabs extends React.Component {
 
     render() {
