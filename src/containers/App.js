@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom'
 import Routing from '../routes'
 import '../css/style.css';
-
+import headerLogo from '../img/header-logo.png';
 
 import {
   Collapse,
@@ -32,7 +32,7 @@ class App extends Component {
     return (
       <div>
         <Navbar dark expand="md" className="navbar-default">
-          <div className="top-logo">QA Health Logo</div>
+          <div className="top-logo"><img src={headerLogo} height="60" /></div>
         </Navbar>
         <Navbar dark expand="md" color="info" >
         <Link exact to="/" className="link-none-underline"><NavbarBrand>QA Health</NavbarBrand></Link>
