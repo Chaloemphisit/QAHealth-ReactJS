@@ -3,7 +3,8 @@ import { Link } from 'react-router-dom'
 import Routing from '../routes'
 import '../css/style.css';
 import headerLogo from '../img/header-logo.png';
-
+import { library } from '@fortawesome/fontawesome-svg-core';
+import { faEnvelope, faKey } from '@fortawesome/free-solid-svg-icons';
 import {
   Collapse,
   Navbar,
@@ -13,6 +14,8 @@ import {
   NavItem,
   NavLink
 } from 'reactstrap';
+
+library.add(faEnvelope, faKey);
 
 class App extends Component {
   constructor(props) {
@@ -32,10 +35,10 @@ class App extends Component {
     return (
       <div>
         <Navbar dark expand="md" className="navbar-default">
-          <div className="top-logo"><img src={headerLogo} height="60" /></div>
+          <div className="top-logo"><img src={headerLogo} alt="Header Logo" height="60" /></div>
         </Navbar>
         <Navbar dark expand="md" color="info" >
-        <Link exact to="/" className="link-none-underline"><NavbarBrand>QA Health</NavbarBrand></Link>
+          <Link exact to="/" className="link-none-underline"><NavbarBrand>QA Health</NavbarBrand></Link>
           <NavbarToggler onClick={this.toggle} />
           <Collapse isOpen={this.state.isOpen} navbar>
             <Nav className="ml-auto" navbar>
