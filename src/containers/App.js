@@ -4,7 +4,7 @@ import Routing from '../routes'
 import '../css/style.css';
 import headerLogo from '../img/header-logo.png';
 import { library } from '@fortawesome/fontawesome-svg-core';
-import { faEnvelope, faKey } from '@fortawesome/free-solid-svg-icons';
+
 import {
   Collapse,
   Navbar,
@@ -15,7 +15,9 @@ import {
   NavLink
 } from 'reactstrap';
 
-library.add(faEnvelope, faKey);
+import { faEnvelope, faKey, faComments, faQuestion } from '@fortawesome/free-solid-svg-icons';
+library.add(faEnvelope, faKey, faComments,faQuestion);
+
 
 class App extends Component {
   constructor(props) {

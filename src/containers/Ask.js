@@ -76,7 +76,7 @@ export default class Ask extends React.Component {
                 <Label for="congenitalDisease">โรคประจำตัว</Label>
                 <Input type="text" name="congenitalDisease" id="congenitalDisease" placeholder="ระบุโรคประจำตัว" />
               </FormGroup>
-              <div className="button3"><Link to="/" className="back404page">ตั้งคำถาม</Link></div>
+              <Link to="/" className="back404page"><div className="button3">ตั้งคำถาม</div></Link>
             </Form>
           </CardBody>
         </Card>

@@ -8,7 +8,7 @@ export default class Page404 extends React.Component {
         <div class="fof">
           <h1>Error 404</h1>
           <h3>Nothing to see here, move along, move along...<code>{window.location.pathname}</code></h3>
-          <div class="button3"><Link to="/" className="back404page">กลับหน้าหลัก</Link></div>
+          <Link to="/" className="back404page"><div className="button3">กลับหน้าหลัก</div></Link>
         </div>
       </div>
     );

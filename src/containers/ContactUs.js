@@ -1,7 +1,7 @@
 import React from 'react';
 
 import {
-  Card, CardHeader, CardBody, Col, Button, FormText, Form, FormGroup, Label, Input
+  Card, CardHeader, CardBody, Form, FormGroup, Label, Input
 } from 'reactstrap';
 import { Link } from 'react-router-dom';
 
@@ -26,7 +26,7 @@ export default class ContactUs extends React.Component {
           <Label for="detail">รายละเอียด</Label>
           <Input type="textarea" name="detail" id="detail" style={{ height: 200 }}  />
         </FormGroup>
-        <Button>ส่ง</Button>
+        <Link to="/" className="back404page"><div className="button3">ส่ง</div></Link>
       </Form>
           </CardBody>
         </Card>

@@ -18,7 +18,7 @@ export default class Topic extends React.Component {
                 <CardTitle style={{ fontSize: '1.6em' }}>หัวข้อคำถาม กกกกกกกกกกกกกกกกกกกกกกกกก</CardTitle>
               </Col>
               <Col md={2} xs={12} sm={12}>
-                <Label className="">คำถามเฉาะทางแพทย์</Label>
+                <Label className=""> <FontAwesomeIcon icon="question"  /> คำถามเฉาะทางแพทย์</Label>
               </Col>
             </Row>
             <Row className="mt-4 ml-2 mb-4">
@@ -29,7 +29,7 @@ export default class Topic extends React.Component {
           </div>
           </Card>
         </Row>
-        <div class="background"><span><FontAwesomeIcon icon="envelope" />33 ความคิดเห็น</span></div>
+        <div class="background"><span><FontAwesomeIcon icon="comments" size="lg" />  33 ความคิดเห็น</span></div>
       </div>
     );
   }
