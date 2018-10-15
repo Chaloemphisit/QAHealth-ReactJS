@@ -5,7 +5,7 @@ body {
 }
 
 #login-signup-div {
-    width:100%;
+    width: 100%;
     height: 82.5vh;
     background-image: linear-gradient(to bottom, #a8edea 0%, #fed6e3 100%);
 }
@@ -95,6 +95,7 @@ div.background span {
     margin: 0 auto;
     display: table;
 }
+
 .child {
     display: table-cell;
     vertical-align: middle;
@@ -135,7 +136,7 @@ div.button3:hover {
     color: #828282;
 }
 
-div.button3#ask-submit{
+div.button3#ask-submit {
     width: 10em;
     font-size: 1.3em;
 }
@@ -192,6 +193,10 @@ div.button3#ask-submit{
 .top-logo {
     margin: 0 auto;
     color: #FFFFFF;
+    -webkit-filter:brightness(1000%); 
+    filter: brightness(1000%) drop-shadow(5px 10px 15px rgba(255,255,255,0.6));
+    /* filter: drop-shadow(8px 8px 10px gray); */
+    /* filter: contrast(1000%); */
 }
 
 /*  */
