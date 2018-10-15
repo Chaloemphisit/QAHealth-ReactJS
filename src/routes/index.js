@@ -1,9 +1,8 @@
 import React from 'react'
 import { Switch, Route } from 'react-router-dom'
 
-import {Home, Page404} from '../containers'
+import {Home, Page404, Ask} from '../containers'
 
-const Ask = () => <h1 className="ml-auto">อย่าพึ่งรีบดูสิ!!....กำลังทำอยู่</h1>
 const ContactUs = () => <h1 >อย่าพึ่งรีบดูสิ!!....กำลังทำอยู่</h1>
 const LoginSignup = () => <h1 >อย่าพึ่งรีบดูสิ!!....กำลังทำอยู่</h1>
 
