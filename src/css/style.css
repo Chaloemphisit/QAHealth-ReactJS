@@ -5,14 +5,16 @@ body {
 }
 
 /* Line With Text */
-  div.background {
-      color: #17A2B7;
+
+div.background {
+    color: #17A2B7;
     position: relative;
     z-index: 1;
     margin-top: 20px;
     text-align: center;
-  }
-  div.background:before {
+}
+
+div.background:before {
     border-top: 1.5px solid #17A2B7;
     content: "";
     margin: 0 auto;
@@ -25,14 +27,16 @@ body {
     bottom: 0;
     width: 99.5%;
     z-index: -1;
-  }
-  div.background span {
+}
+
+div.background span {
     /* to hide the lines from behind the text, you have to set the background color the same as the container */
     background: #fff;
     padding: 0 15px;
-  }
+}
 
 /* Question List */
+
 .question-header {
     color: #17A2B8
 }
@@ -83,6 +87,12 @@ body {
     width: 99%;
     height: 6vh;
     margin: 0 auto;
+    display: table;
+}
+.child {
+    display: table-cell;
+    vertical-align: middle;
+    padding-left: 20px;
 }
 
 #topicContainer {
@@ -91,12 +101,20 @@ body {
     height: 40vh;
 }
 
+#card-margin-top-bottom {
+    margin-top: 3%;
+    width: inherit;
+    margin-bottom: 3%;
+}
+
 #topicCard {
     background-image: linear-gradient(to top, #fff1eb 0%, #ace0f9 100%);
     border: none;
 }
 
 div.button3 {
+    width: auto;
+    height: auto;
     display: inline-block;
     padding: 0.3em 1.2em;
     margin: 0 0.3em 0.3em 0;
@@ -109,6 +127,11 @@ div.button3 {
 
 div.button3:hover {
     color: #828282;
+}
+
+div.button3#ask-submit{
+    width: 10em;
+    font-size: 1.3em;
 }
 
 @media all and (max-width:30em) {

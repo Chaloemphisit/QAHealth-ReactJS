@@ -9,7 +9,7 @@ export default class Ask extends React.Component {
   render() {
     return (
       // Show Div Full Page => container-fluid
-      <div className="container ask-card">
+      <div className="container" id="card-margin-top-bottom">
         <Card>
           <CardHeader tag="h3">รายละเอียด</CardHeader>
           <CardBody>
@@ -76,7 +76,7 @@ export default class Ask extends React.Component {
                 <Label for="congenitalDisease">โรคประจำตัว</Label>
                 <Input type="text" name="congenitalDisease" id="congenitalDisease" placeholder="ระบุโรคประจำตัว" />
               </FormGroup>
-              <Link to="/" className="back404page"><div className="button3">ตั้งคำถาม</div></Link>
+              <Link to="/topic" className="back404page"><div className="button3 mt-3 float-right" id="ask-submit">ตั้งคำถาม</div></Link>
             </Form>
           </CardBody>
         </Card>

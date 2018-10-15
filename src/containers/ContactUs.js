@@ -9,7 +9,7 @@ export default class ContactUs extends React.Component {
   render() {
     return (
       // Show Div Full Page => container-fluid
-      <div className="container ask-card">
+      <div className="container" id="card-margin-top-bottom">
         <Card>
           <CardHeader tag="h3">ติดต่อสอบถาม</CardHeader>
           <CardBody>
@@ -26,7 +26,7 @@ export default class ContactUs extends React.Component {
           <Label for="detail">รายละเอียด</Label>
           <Input type="textarea" name="detail" id="detail" style={{ height: 200 }}  />
         </FormGroup>
-        <Link to="/" className="back404page"><div className="button3">ส่ง</div></Link>
+        <Link to="/" className="back404page"><div className="button3" id="ask-submit">ส่ง</div></Link>
       </Form>
           </CardBody>
         </Card>

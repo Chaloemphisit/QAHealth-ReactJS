@@ -16,7 +16,7 @@ import {
 } from 'reactstrap';
 
 import { faEnvelope, faKey, faComments, faQuestion } from '@fortawesome/free-solid-svg-icons';
-library.add(faEnvelope, faKey, faComments,faQuestion);
+library.add(faEnvelope, faKey, faComments, faQuestion);
 
 
 class App extends Component {
