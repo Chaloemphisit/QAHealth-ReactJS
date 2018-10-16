@@ -15,11 +15,11 @@ export default class Topic extends React.Component {
         <Row>
           <Card body id="topicCard">
             <Row>
-              <Col md={10} xs={12} sm={12}>
+              <Col md={10} xs={10} sm={10}>
                 <CardTitle style={{ fontSize: '1.6em' }}>หัวข้อคำถาม กกกกกกกกกกกกกกกกกกกกกกกกก</CardTitle>
                 <Label className=""> <FontAwesomeIcon icon="question" /> คำถามเฉาะทางแพทย์</Label>
               </Col>
-              <Col md={2} xs={12} sm={12}>
+              <Col md={2} xs={2} sm={2}>
                 <Link to="/spam" ><a href="/" className="float-right" id="trash"> <FontAwesomeIcon icon="trash-alt" /></a>
                   <UncontrolledTooltip placement="right" target="trash">แจ้งลบ</UncontrolledTooltip>
                 </Link>

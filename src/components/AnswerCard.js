@@ -11,10 +11,10 @@ export default class AnswerCard extends React.Component {
             <Row>
                 <Card body id="answerCard">
                     <Row>
-                        <Col md={11} xs={11} sm={11}>
+                        <Col md={10} xs={10} sm={10}>
                             <CardTitle style={{ fontSize: '0.9em' }}>คำตอบที่ x</CardTitle>
                         </Col>
-                        <Col md={1} xs={1} sm={1}>
+                        <Col md={2} xs={2} sm={2}>
                             <Link to="/spam" ><a href="/" className="float-right" id="trash"> <FontAwesomeIcon icon="trash-alt" /></a>
                                 <UncontrolledTooltip placement="right" target="trash">แจ้งลบ</UncontrolledTooltip>
                             </Link>
