@@ -15,8 +15,8 @@ import {
   NavLink
 } from 'reactstrap';
 
-import { faEnvelope, faKey, faComments, faQuestion } from '@fortawesome/free-solid-svg-icons';
-library.add(faEnvelope, faKey, faComments, faQuestion);
+import { faEnvelope, faKey, faComments, faQuestion, faTrashAlt } from '@fortawesome/free-solid-svg-icons';
+library.add(faEnvelope, faKey, faComments, faQuestion, faTrashAlt);
 
 
 class App extends Component {
