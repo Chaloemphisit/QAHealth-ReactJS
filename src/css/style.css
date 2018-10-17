@@ -124,6 +124,7 @@ div.background span {
     margin-top: 2%;
     background-image: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
     border: none;
+    filter: drop-shadow(5px 5px 3px rgba(0,0,0,0.2));
 }
 
 div.button3 {
