@@ -6,6 +6,7 @@ import {
 import { Link } from 'react-router-dom';
 
 export default class Ask extends React.Component {
+
   render() {
     return (
       // Show Div Full Page => container-fluid
