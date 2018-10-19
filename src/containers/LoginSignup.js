@@ -1,6 +1,6 @@
 import React from 'react';
 import { Tabs } from "@yazanaabed/react-tabs";
-import { Card, CardBody, Form, FormGroup, Input, Label, Col, Row, Button, FormText, FormFeedback } from 'reactstrap';
+import { Card, CardBody, Form, FormGroup, Input, Label, Col, Row, Button } from 'reactstrap';
 import { Link } from 'react-router-dom';
 
 

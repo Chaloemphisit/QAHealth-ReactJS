@@ -1,7 +1,7 @@
 import React from 'react';
 import { Tabs } from "@yazanaabed/react-tabs";
 import QuestionsList from './QuestionsList'
-import { ListGroup, ListGroupItem, ListGroupItemHeading, ListGroupItemText, Badge } from 'reactstrap';
+import { ListGroup, ListGroupItem, ListGroupItemHeading, ListGroupItemText } from 'reactstrap';
 import { Link } from 'react-router-dom';
 
 

@@ -1,7 +1,7 @@
 import React from 'react'
 import { Switch, Route } from 'react-router-dom'
 
-import { Home, Page404, Ask, ContactUs, Topic, LoginSignup, UserProfile } from '../containers'
+import { Home, Page404, Ask, ContactUs, Topic, LoginSignup, UserProfile, EditProfile } from '../containers'
 
 export default () => (
   <Switch>
@@ -11,6 +11,7 @@ export default () => (
     <Route exact path="/contactus" component={ContactUs} />
     <Route exact path="/login" component={LoginSignup} />
     <Route exact path="/profile/:id" component={UserProfile} />
+    <Route exact path="/profile/:id/editProfile" component={EditProfile} />
     <Route component={Page404} />
   </Switch>
 )
