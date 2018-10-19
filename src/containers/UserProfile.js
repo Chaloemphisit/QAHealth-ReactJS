@@ -25,7 +25,7 @@ export default class LoginSignup extends React.Component {
                                     <Row >
                                         <Col align="center" className="text-md-left text-lg-left">
                                             <h2 style={{ color: hColor, fontWeight: 'bold' }}>ทดสอบ ทำไม </h2>
-                                            <p>User ID :{this.props.match.params.id}</p>
+                                            {/* <p>User ID :{this.props.match.params.id}</p> */}
                                         </Col>
                                     </Row>
                                     <hr />
