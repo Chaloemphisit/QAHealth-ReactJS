@@ -9,13 +9,13 @@ export default class Home extends React.Component {
   render() {
     return (
       // Show Div Full Page => container-fluid
-      <div className="container mb-5"> 
+      <div className="container mb-5">
         <Row>
           <Col xs="12"><SearchPanel /></Col>
         </Row>
         <Row>
           <Col xs="12" md="12">
-            <Card>
+            <Card outline color="info">
               <CardBody>
                 <QuestionTabs />
               </CardBody>

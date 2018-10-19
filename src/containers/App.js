@@ -6,18 +6,15 @@ import headerLogo from '../img/header-logo.png';
 import { library } from '@fortawesome/fontawesome-svg-core';
 
 import {
-  Collapse,
-  Navbar,
-  NavbarToggler,
-  NavbarBrand,
-  Nav,
-  NavItem,
-  NavLink
+  Collapse, Navbar, NavbarToggler, NavbarBrand, Nav,
+  NavItem, NavLink, UncontrolledDropdown, DropdownToggle,
+  DropdownItem, DropdownMenu
 } from 'reactstrap';
 
-import { faEnvelope, faKey, faComments, faQuestion, faTrashAlt } from '@fortawesome/free-solid-svg-icons';
-library.add(faEnvelope, faKey, faComments, faQuestion, faTrashAlt);
-
+/*---------------------------------------- FontAwesome ----------------------------------------*/
+import { faEnvelope, faKey, faComments, faQuestion, faTrashAlt, faUserCircle } from '@fortawesome/free-solid-svg-icons';
+library.add(faEnvelope, faKey, faComments, faQuestion, faTrashAlt, faUserCircle);
+/*--------------------------------------------------------------------------------------------*/
 
 class App extends Component {
   constructor(props) {
@@ -46,7 +43,7 @@ class App extends Component {
 
   render() {
     return (
-      <div  onClick={this.closeNav}>
+      <div onClick={this.closeNav}>
         <Navbar dark expand="md" className="navbar-default">
           <div className="top-logo"><Link exact to="/"><img src={headerLogo} className="inverted" alt="Header Logo" height="60" /></Link></div>
         </Navbar>
@@ -65,8 +62,22 @@ class App extends Component {
                 <Link to="/contactus" ><NavLink active={window.location.pathname === '/contactus'} >ติดต่อเรา</NavLink></Link>
               </NavItem>
               <NavItem>
-                <Link to="/login" ><NavLink active={window.location.pathname === '/login'} >Login/Signup</NavLink></Link>
+                <Link to="/login" ><NavLink active={window.location.pathname === '/login'} >Log In/Sign Up</NavLink></Link>
               </NavItem>
+              <UncontrolledDropdown nav inNavbar active={true}>
+                <DropdownToggle nav caret>
+                  [ชื่อ นามสกุล]
+                </DropdownToggle>
+                <DropdownMenu right>
+                  <DropdownItem>
+                  <Link to="/profile/12345" >โปรไฟล์</Link>
+                  </DropdownItem>
+                  <DropdownItem divider />
+                  <DropdownItem>
+                  <Link to="/logout" >Log Out</Link>
+                  </DropdownItem>
+                </DropdownMenu>
+              </UncontrolledDropdown>
             </Nav>
           </Collapse>
         </Navbar>

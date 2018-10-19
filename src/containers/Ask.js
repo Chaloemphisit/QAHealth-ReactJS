@@ -11,8 +11,8 @@ export default class Ask extends React.Component {
     return (
       // Show Div Full Page => container-fluid
       <div className="container" id="card-margin-top-bottom">
-        <Card>
-          <CardHeader tag="h3">รายละเอียด</CardHeader>
+        <Card outline color="info">
+          <CardHeader style={{ backgroundColor: '#17A2B8', color: '#FFF' }} tag="h3">รายละเอียด</CardHeader>
           <CardBody>
             <Form>
               <FormGroup>

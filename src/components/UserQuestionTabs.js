@@ -5,7 +5,7 @@ import { ListGroup, ListGroupItem, ListGroupItemHeading, ListGroupItemText, Badg
 import { Link } from 'react-router-dom';
 
 
-class QuestionTabs extends React.Component {
+class UserQuestionTabs extends React.Component {
 
     constructor(props) {
         super(props);
@@ -14,7 +14,6 @@ class QuestionTabs extends React.Component {
             questions: {
                 allQuestion: [],
                 answerQuestion: [],
-                noAnswerQuestion: []
             },
             isLoading: false,
             error: null
@@ -46,9 +45,9 @@ class QuestionTabs extends React.Component {
             return (
                 <div>
                     <Tabs activeTab={{ id: "tab1" }}>
-                        <Tabs.Tab id="tab1" title="คำถามทั้งหมด" ><div className="mt-3" > <QuestionsList /></div> </Tabs.Tab>
-                        <Tabs.Tab id="tab2" title="คำถามที่ตอบแล้ว"><div className="mt-3"> <QuestionsList /></div> </Tabs.Tab>
-                        <Tabs.Tab id="tab3" title="คำถามที่ยังไม่ได้ตอบ"> <div className="mt-3"><QuestionsList /></div></Tabs.Tab>
+                        <Tabs.Tab id="tab1" ><div className="mt-3" > <QuestionsList /></div> </Tabs.Tab>
+                        <Tabs.Tab id="tab2" ><div className="mt-3"> <QuestionsList /></div> </Tabs.Tab>
+                        <Tabs.Tab id="tab3" > <div className="mt-3"><QuestionsList /></div></Tabs.Tab>
                     </Tabs>
                 </div>
             );
@@ -61,14 +60,14 @@ class QuestionTabs extends React.Component {
                     }}
                 >
                     <React.Fragment>
-                        <Tabs.Tab id="tab1" title="คำถามทั้งหมด" >
+                        <Tabs.Tab id="tab1" title="คำถามที่ฉันตั้ง" >
                             <div className="mt-3" >
                                 {
                                     this.state.questions.allQuestion.map(
                                         (question, index) =>
-                                            < ListGroup key={index} >
+                                            < ListGroup key={index}>
                                                 <ListGroupItem>
-                                                    <ListGroupItemHeading ><Link to={question.Link} className="question-header">{question.question_Header}</Link><Badge style={{ marginLeft: '2%' }} pill> ตอบแล้ว {question.comment}</Badge></ListGroupItemHeading>
+                                                    <ListGroupItemHeading ><Link to={question.Link} className="question-header">{question.question_Header}</Link></ListGroupItemHeading>
                                                     <ListGroupItemText>
                                                         <Link to={question.Link} className="question-body">
                                                             {question.decripttion}
@@ -80,33 +79,14 @@ class QuestionTabs extends React.Component {
                                 }
                             </div>
                         </Tabs.Tab>
-                        <Tabs.Tab id="tab2" title="คำถามที่ตอบแล้ว">
+                        <Tabs.Tab id="tab2" title="คำถามที่ฉันตอบ">
                             <div className="mt-3">
                                 {
                                     this.state.questions.answerQuestion.map(
                                         (question, index) =>
                                             < ListGroup key={index}>
                                                 <ListGroupItem>
-                                                    <ListGroupItemHeading ><Link to="/" className="question-header">{question.question_Header}</Link><Badge style={{ marginLeft: '2%' }} pill> ตอบแล้ว {question.comment}</Badge></ListGroupItemHeading>
-                                                    <ListGroupItemText>
-                                                        <Link to="/topic" className="question-body">
-                                                            {question.decripttion}
-                                                        </Link>
-                                                    </ListGroupItemText>
-                                                </ListGroupItem>
-                                            </ListGroup >
-                                    )
-                                }
-                            </div>
-                        </Tabs.Tab>
-                        <Tabs.Tab id="tab3" title="คำถามที่ยังไม่ได้ตอบ">
-                            <div className="mt-3">
-                                {
-                                    this.state.questions.noAnswerQuestion.map(
-                                        (question, index) =>
-                                            < ListGroup key={index}>
-                                                <ListGroupItem>
-                                                    <ListGroupItemHeading ><Link to="/" className="question-header">{question.question_Header}</Link><Badge style={{ marginLeft: '2%' }} pill> ตอบแล้ว {question.comment}</Badge></ListGroupItemHeading>
+                                                    <ListGroupItemHeading ><Link to="/" className="question-header">{question.question_Header}</Link></ListGroupItemHeading>
                                                     <ListGroupItemText>
                                                         <Link to="/topic" className="question-body">
                                                             {question.decripttion}
@@ -124,4 +104,4 @@ class QuestionTabs extends React.Component {
         );
     }
 }
-export default QuestionTabs;
+export default UserQuestionTabs;
