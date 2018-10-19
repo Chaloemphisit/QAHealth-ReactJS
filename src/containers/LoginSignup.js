@@ -53,8 +53,7 @@ export default class LoginSignup extends React.Component {
 
             <div id="login-signup-div" className="container-fluid">
                 <Row>
-                    <Col sm={0} xs={0}></Col>
-                    <Col md={5} xs={12} sm={12}>
+                    <Col lg={{ size: 4, offset: 4}} md={{ size: 6, offset: 3 }} xs={12} sm={12}>
                         <Card className="mt-3">
                             <CardBody>
                                 <div style={styles}>
@@ -179,7 +178,6 @@ export default class LoginSignup extends React.Component {
                             </CardBody>
                         </Card>
                     </Col>
-                    <Col></Col>
                 </Row>
             </div>
         );

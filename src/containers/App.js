@@ -43,7 +43,7 @@ class App extends Component {
 
   render() {
     return (
-      <div onClick={this.closeNav}>
+      <div>
         <Navbar dark expand="md" className="navbar-default">
           <div className="top-logo"><Link exact to="/"><img src={headerLogo} className="inverted" alt="Header Logo" height="60" /></Link></div>
         </Navbar>
@@ -51,24 +51,24 @@ class App extends Component {
           <Link exact to="/" className="link-none-underline"><NavbarBrand>Health QA</NavbarBrand></Link>
           <NavbarToggler onClick={this.toggle} />
           <Collapse isOpen={this.state.isOpen} navbar>
-            <Nav className="ml-auto" navbar onClick={this.closeNav}>
+            <Nav className="ml-auto" navbar >
               <NavItem>
-                <Link exact to="/"><NavLink active={window.location.pathname === '/'} >หน้าหลัก</NavLink></Link>
+                <Link exact to="/" onClick={this.closeNav}><NavLink active={window.location.pathname === '/'} >หน้าหลัก</NavLink></Link>
               </NavItem>
               <NavItem>
-                <Link to="/ask" ><NavLink active={window.location.pathname === '/ask'} >ถามหมอ</NavLink></Link>
+                <Link to="/ask" onClick={this.closeNav}><NavLink active={window.location.pathname === '/ask'} >ถามหมอ</NavLink></Link>
               </NavItem>
               <NavItem>
-                <Link to="/contactus" ><NavLink active={window.location.pathname === '/contactus'} >ติดต่อเรา</NavLink></Link>
+                <Link to="/contactus" onClick={this.closeNav}><NavLink active={window.location.pathname === '/contactus'} >ติดต่อเรา</NavLink></Link>
               </NavItem>
               <NavItem>
-                <Link to="/login" ><NavLink active={window.location.pathname === '/login'} >Log In/Sign Up</NavLink></Link>
+                <Link to="/login" onClick={this.closeNav}><NavLink active={window.location.pathname === '/login'} >Log In/Sign Up</NavLink></Link>
               </NavItem>
               <UncontrolledDropdown nav inNavbar active={true}>
                 <DropdownToggle nav caret>
                   [ชื่อ นามสกุล]
                 </DropdownToggle>
-                <DropdownMenu right>
+                <DropdownMenu right onClick={this.closeNav}>
                   <DropdownItem>
                   <Link to="/profile/12345" >โปรไฟล์</Link>
                   </DropdownItem>
