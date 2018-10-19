@@ -44,7 +44,7 @@ export default class LoginSignup extends React.Component {
                                                 </Form>
                                             </div>
                                         </Tabs.Tab>
-                                        <Tabs.Tab id="tab2" title="Signup">
+                                        <Tabs.Tab id="tab2" title="Sign up">
                                             <div className="mt-3">
                                                 <Form>
                                                 <FormGroup>

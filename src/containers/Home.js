@@ -9,7 +9,7 @@ export default class Home extends React.Component {
   render() {
     return (
       // Show Div Full Page => container-fluid
-      <div className="container"> 
+      <div className="container mb-5"> 
         <Row>
           <Col xs="12"><SearchPanel /></Col>
         </Row>

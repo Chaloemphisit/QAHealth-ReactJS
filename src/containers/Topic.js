@@ -8,6 +8,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { Answer, AnswerCard } from '../components';
 
 export default class Topic extends React.Component {
+
   render() {
     return (
       // Show Div Full Page => container-fluid
@@ -16,7 +17,7 @@ export default class Topic extends React.Component {
           <Card body id="topicCard">
             <Row>
               <Col md={10} xs={10} sm={10}>
-                <CardTitle style={{ fontSize: '1.6em' }}>หัวข้อคำถาม กกกกกกกกกกกกกกกกกกกกกกกกก</CardTitle>
+                <CardTitle style={{ fontSize: '1.6em' }}>{"Topic ID:"+this.props.match.params.id}</CardTitle>
                 <Label className=""> <FontAwesomeIcon icon="question" /> คำถามเฉาะทางแพทย์</Label>
               </Col>
               <Col md={2} xs={2} sm={2}>

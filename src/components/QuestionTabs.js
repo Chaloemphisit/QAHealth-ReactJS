@@ -9,6 +9,7 @@ class QuestionTabs extends React.Component {
 
     constructor(props) {
         super(props);
+
         this.state = {
             questions: {
                 allQuestion: [],
@@ -16,7 +17,7 @@ class QuestionTabs extends React.Component {
                 noAnswerQuestion: []
             },
             isLoading: false,
-            error: null,
+            error: null
         }
     }
 
@@ -44,26 +45,10 @@ class QuestionTabs extends React.Component {
         if (isLoading) {
             return (
                 <div>
-                    <Tabs
-                        activeTab={{
-                            id: "tab1"
-                        }}
-                    >
-                        <Tabs.Tab id="tab1" title="คำถามทั้งหมด" >
-                            <div className="mt-3" >
-                                <QuestionsList />
-                            </div>
-                        </Tabs.Tab>
-                        <Tabs.Tab id="tab2" title="คำถามที่ตอบแล้ว">
-                            <div className="mt-3">
-                                <QuestionsList />
-                            </div>
-                        </Tabs.Tab>
-                        <Tabs.Tab id="tab3" title="คำถามที่ยังไม่ได้ตอบ">
-                            <div className="mt-3">
-                                <QuestionsList />
-                            </div>
-                        </Tabs.Tab>
+                    <Tabs activeTab={{ id: "tab1" }}>
+                        <Tabs.Tab id="tab1" title="คำถามทั้งหมด" ><div className="mt-3" > <QuestionsList /></div> </Tabs.Tab>
+                        <Tabs.Tab id="tab2" title="คำถามที่ตอบแล้ว"><div className="mt-3"> <QuestionsList /></div> </Tabs.Tab>
+                        <Tabs.Tab id="tab3" title="คำถามที่ยังไม่ได้ตอบ"> <div className="mt-3"><QuestionsList /></div></Tabs.Tab>
                     </Tabs>
                 </div>
             );
@@ -75,63 +60,65 @@ class QuestionTabs extends React.Component {
                         id: "tab1"
                     }}
                 >
-                    <Tabs.Tab id="tab1" title="คำถามทั้งหมด" >
-                        <div className="mt-3" >
-                            {
-                                this.state.questions.allQuestion.map(
-                                    (question, index) =>
-                                        < ListGroup key={index}>
-                                            <ListGroupItem>
-                                                <ListGroupItemHeading ><Link to="/" className="question-header">{question.question_Header}</Link><Badge style={{ marginLeft: '2%' }} pill> ตอบแล้ว {question.comment}</Badge></ListGroupItemHeading>
-                                                <ListGroupItemText>
-                                                    <Link to="/topic" className="question-body">
-                                                        {question.decripttion}
-                                                    </Link>
-                                                </ListGroupItemText>
-                                            </ListGroupItem>
-                                        </ListGroup >
-                                )
-                            }
-                        </div>
-                    </Tabs.Tab>
-                    <Tabs.Tab id="tab2" title="คำถามที่ตอบแล้ว">
-                        <div className="mt-3">
-                            {
-                                this.state.questions.answerQuestion.map(
-                                    (question, index) =>
-                                        < ListGroup key={index}>
-                                            <ListGroupItem>
-                                                <ListGroupItemHeading ><Link to="/" className="question-header">{question.question_Header}</Link><Badge style={{ marginLeft: '2%' }} pill> ตอบแล้ว {question.comment}</Badge></ListGroupItemHeading>
-                                                <ListGroupItemText>
-                                                    <Link to="/topic" className="question-body">
-                                                        {question.decripttion}
-                                                    </Link>
-                                                </ListGroupItemText>
-                                            </ListGroupItem>
-                                        </ListGroup >
-                                )
-                            }
-                        </div>
-                    </Tabs.Tab>
-                    <Tabs.Tab id="tab3" title="คำถามที่ยังไม่ได้ตอบ">
-                        <div className="mt-3">
-                            {
-                                this.state.questions.noAnswerQuestion.map(
-                                    (question, index) =>
-                                        < ListGroup key={index}>
-                                            <ListGroupItem>
-                                                <ListGroupItemHeading ><Link to="/" className="question-header">{question.question_Header}</Link><Badge style={{ marginLeft: '2%' }} pill> ตอบแล้ว {question.comment}</Badge></ListGroupItemHeading>
-                                                <ListGroupItemText>
-                                                    <Link to="/topic" className="question-body">
-                                                        {question.decripttion}
-                                                    </Link>
-                                                </ListGroupItemText>
-                                            </ListGroupItem>
-                                        </ListGroup >
-                                )
-                            }
-                        </div>
-                    </Tabs.Tab>
+                    <React.Fragment>
+                        <Tabs.Tab id="tab1" title="คำถามทั้งหมด" >
+                            <div className="mt-3" >
+                                {
+                                    this.state.questions.allQuestion.map(
+                                        (question, index) =>
+                                            < ListGroup key={index}>
+                                                <ListGroupItem>
+                                                    <ListGroupItemHeading ><Link to={question.Link} className="question-header">{question.question_Header}</Link><Badge style={{ marginLeft: '2%' }} pill> ตอบแล้ว {question.comment}</Badge></ListGroupItemHeading>
+                                                    <ListGroupItemText>
+                                                        <Link to={question.Link} className="question-body">
+                                                            {question.decripttion}
+                                                        </Link>
+                                                    </ListGroupItemText>
+                                                </ListGroupItem>
+                                            </ListGroup >
+                                    )
+                                }
+                            </div>
+                        </Tabs.Tab>
+                        <Tabs.Tab id="tab2" title="คำถามที่ตอบแล้ว">
+                            <div className="mt-3">
+                                {
+                                    this.state.questions.answerQuestion.map(
+                                        (question, index) =>
+                                            < ListGroup key={index}>
+                                                <ListGroupItem>
+                                                    <ListGroupItemHeading ><Link to="/" className="question-header">{question.question_Header}</Link><Badge style={{ marginLeft: '2%' }} pill> ตอบแล้ว {question.comment}</Badge></ListGroupItemHeading>
+                                                    <ListGroupItemText>
+                                                        <Link to="/topic" className="question-body">
+                                                            {question.decripttion}
+                                                        </Link>
+                                                    </ListGroupItemText>
+                                                </ListGroupItem>
+                                            </ListGroup >
+                                    )
+                                }
+                            </div>
+                        </Tabs.Tab>
+                        <Tabs.Tab id="tab3" title="คำถามที่ยังไม่ได้ตอบ">
+                            <div className="mt-3">
+                                {
+                                    this.state.questions.noAnswerQuestion.map(
+                                        (question, index) =>
+                                            < ListGroup key={index}>
+                                                <ListGroupItem>
+                                                    <ListGroupItemHeading ><Link to="/" className="question-header">{question.question_Header}</Link><Badge style={{ marginLeft: '2%' }} pill> ตอบแล้ว {question.comment}</Badge></ListGroupItemHeading>
+                                                    <ListGroupItemText>
+                                                        <Link to="/topic" className="question-body">
+                                                            {question.decripttion}
+                                                        </Link>
+                                                    </ListGroupItemText>
+                                                </ListGroupItem>
+                                            </ListGroup >
+                                    )
+                                }
+                            </div>
+                        </Tabs.Tab>
+                    </React.Fragment>
                 </Tabs>
             </div>
         );

@@ -7,7 +7,7 @@ export default () => (
   <Switch>
     <Route exact path="/" component={Home} />
     <Route exact path="/ask" component={Ask} />
-    <Route exact path="/Topic" component={Topic}></Route>
+    <Route exact path="/topic/:id" component={Topic}></Route>
     <Route exact path="/contactus" component={ContactUs} />
     <Route exact path="/login" component={LoginSignup} />
     <Route component={Page404} />
