@@ -35,7 +35,7 @@ export default class LoginSignup extends React.Component {
                                     </Row>
                                     <Row>
                                         <Col lg={3} md={4} sm={4} xs={6}><h5 style={{ color: hColor, fontWeight: 'bold' }}>Email</h5></Col>
-                                        <Col lg={5} md={4} sm={8} xs={6}><h5 align="left" style={{ color: bColor }}>khonthai</h5></Col>
+                                        <Col lg={5} md={4} sm={8} xs={6}><h5 align="left" style={{ color: bColor }}>khonthai@thai.com</h5></Col>
                                     </Row>
 
                                 </Col>
