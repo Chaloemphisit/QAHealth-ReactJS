@@ -21,6 +21,10 @@ class QuestionTabs extends React.Component {
         }
     }
 
+    handleSelect(e) {
+        console.log('Selected tab: ' + e.Tabs.activeTab);
+    }
+
     componentDidMount() {
         this.setState({ isLoading: true });
         fetch("https://my-json-server.typicode.com/Chaloemphisit/HealthQA-API-Test/question")
@@ -54,11 +58,13 @@ class QuestionTabs extends React.Component {
             );
         }
         return (
+            
             <div>
                 <Tabs
                     activeTab={{
-                        id: "tab1"
+                        id:'tab1'
                     }}
+                    
                 >
                     <React.Fragment>
                         <Tabs.Tab id="tab1" title="คำถามทั้งหมด" >
@@ -68,9 +74,9 @@ class QuestionTabs extends React.Component {
                                         (question, index) =>
                                             < ListGroup key={index} >
                                                 <ListGroupItem>
-                                                    <ListGroupItemHeading ><Link to={question.Link} className="question-header">{question.question_Header}</Link><Badge style={{ marginLeft: '2%' }} pill> ตอบแล้ว {question.comment}</Badge></ListGroupItemHeading>
+                                                    <ListGroupItemHeading ><Link to={"/topic/" + question.id} className="question-header">{question.question_Header}</Link><Badge style={{ marginLeft: '2%' }} pill> ตอบแล้ว {question.comment}</Badge></ListGroupItemHeading>
                                                     <ListGroupItemText>
-                                                        <Link to={question.Link} className="question-body">
+                                                        <Link to={"topic/" + question.id} className="question-body">
                                                             {question.decripttion}
                                                         </Link>
                                                     </ListGroupItemText>
@@ -87,9 +93,9 @@ class QuestionTabs extends React.Component {
                                         (question, index) =>
                                             < ListGroup key={index}>
                                                 <ListGroupItem>
-                                                    <ListGroupItemHeading ><Link to="/" className="question-header">{question.question_Header}</Link><Badge style={{ marginLeft: '2%' }} pill> ตอบแล้ว {question.comment}</Badge></ListGroupItemHeading>
+                                                    <ListGroupItemHeading ><Link to={"/topic/" + question.id} className="question-header">{question.question_Header}</Link><Badge style={{ marginLeft: '2%' }} pill> ตอบแล้ว {question.comment}</Badge></ListGroupItemHeading>
                                                     <ListGroupItemText>
-                                                        <Link to="/topic" className="question-body">
+                                                        <Link to={"/topic/" + question.id} className="question-body">
                                                             {question.decripttion}
                                                         </Link>
                                                     </ListGroupItemText>
@@ -106,9 +112,9 @@ class QuestionTabs extends React.Component {
                                         (question, index) =>
                                             < ListGroup key={index}>
                                                 <ListGroupItem>
-                                                    <ListGroupItemHeading ><Link to="/" className="question-header">{question.question_Header}</Link><Badge style={{ marginLeft: '2%' }} pill> ตอบแล้ว {question.comment}</Badge></ListGroupItemHeading>
+                                                    <ListGroupItemHeading ><Link to={"/topic/" + question.id} className="question-header">{question.question_Header}</Link><Badge style={{ marginLeft: '2%' }} pill> ตอบแล้ว {question.comment}</Badge></ListGroupItemHeading>
                                                     <ListGroupItemText>
-                                                        <Link to="/topic" className="question-body">
+                                                        <Link to={"/topic/" + question.id} className="question-body">
                                                             {question.decripttion}
                                                         </Link>
                                                     </ListGroupItemText>

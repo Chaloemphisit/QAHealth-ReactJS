@@ -50,7 +50,6 @@ export default class LoginSignup extends React.Component {
         const { firstName, lastName, username, password, email } = this.state;
 
         return (
-
             <div id="login-signup-div" className="container-fluid">
                 <Row>
                     <Col lg={{ size: 4, offset: 4}} md={{ size: 6, offset: 3 }} xs={12} sm={12}>
