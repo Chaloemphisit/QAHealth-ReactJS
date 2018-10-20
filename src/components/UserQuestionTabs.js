@@ -67,10 +67,10 @@ class UserQuestionTabs extends React.Component {
                                         (question, index) =>
                                             < ListGroup key={index}>
                                                 <ListGroupItem>
-                                                    <ListGroupItemHeading ><Link to={question.Link} className="question-header">{question.question_Header}</Link></ListGroupItemHeading>
+                                                    <ListGroupItemHeading ><Link to={"/topic/"+question.id} className="question-header">{question.question_Header}</Link></ListGroupItemHeading>
                                                     <ListGroupItemText>
-                                                        <Link to={question.Link} className="question-body">
-                                                            {question.decripttion}
+                                                        <Link to={"/topic/"+question.id} className="question-body">
+                                                            {question.description}
                                                         </Link>
                                                     </ListGroupItemText>
                                                 </ListGroupItem>
@@ -86,10 +86,10 @@ class UserQuestionTabs extends React.Component {
                                         (question, index) =>
                                             < ListGroup key={index}>
                                                 <ListGroupItem>
-                                                    <ListGroupItemHeading ><Link to="/" className="question-header">{question.question_Header}</Link></ListGroupItemHeading>
+                                                    <ListGroupItemHeading ><Link to={"/topic/"+question.id} className="question-header">{question.question_Header}</Link></ListGroupItemHeading>
                                                     <ListGroupItemText>
-                                                        <Link to="/topic" className="question-body">
-                                                            {question.decripttion}
+                                                        <Link to={"/topic/"+question.id} className="question-body">
+                                                            {question.description}
                                                         </Link>
                                                     </ListGroupItemText>
                                                 </ListGroupItem>

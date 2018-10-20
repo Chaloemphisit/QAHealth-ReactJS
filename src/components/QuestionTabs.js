@@ -77,7 +77,7 @@ class QuestionTabs extends React.Component {
                                                     <ListGroupItemHeading ><Link to={"/topic/" + question.id} className="question-header">{question.question_Header}</Link><Badge style={{ marginLeft: '2%' }} pill> ตอบแล้ว {question.comment}</Badge></ListGroupItemHeading>
                                                     <ListGroupItemText>
                                                         <Link to={"topic/" + question.id} className="question-body">
-                                                            {question.decripttion}
+                                                            {question.description}
                                                         </Link>
                                                     </ListGroupItemText>
                                                 </ListGroupItem>
@@ -96,7 +96,7 @@ class QuestionTabs extends React.Component {
                                                     <ListGroupItemHeading ><Link to={"/topic/" + question.id} className="question-header">{question.question_Header}</Link><Badge style={{ marginLeft: '2%' }} pill> ตอบแล้ว {question.comment}</Badge></ListGroupItemHeading>
                                                     <ListGroupItemText>
                                                         <Link to={"/topic/" + question.id} className="question-body">
-                                                            {question.decripttion}
+                                                            {question.description}
                                                         </Link>
                                                     </ListGroupItemText>
                                                 </ListGroupItem>
@@ -115,7 +115,7 @@ class QuestionTabs extends React.Component {
                                                     <ListGroupItemHeading ><Link to={"/topic/" + question.id} className="question-header">{question.question_Header}</Link><Badge style={{ marginLeft: '2%' }} pill> ตอบแล้ว {question.comment}</Badge></ListGroupItemHeading>
                                                     <ListGroupItemText>
                                                         <Link to={"/topic/" + question.id} className="question-body">
-                                                            {question.decripttion}
+                                                            {question.description}
                                                         </Link>
                                                     </ListGroupItemText>
                                                 </ListGroupItem>
