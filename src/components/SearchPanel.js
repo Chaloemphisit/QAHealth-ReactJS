@@ -8,7 +8,7 @@ const SearchPanel = (props) => {
         <Container fluid>
           <div >
             <fieldset className="field-container">
-              <input type="text" placeholder="ืทดสอบ" className="field" />
+              <input type="text" placeholder="อาการแบบนี้ถือเป็น bipolar หรือไม่..." className="field" />
               <div className="icons-container">
                 <div className="icon-search"></div>
                 <div className="icon-close">
