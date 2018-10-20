@@ -149,7 +149,7 @@ export default class Topic extends React.Component {
           <Answer />
         </Row>
 
-        <div class="background"><span><FontAwesomeIcon icon="comments" size="lg" />  33 คำตอบ</span></div>
+        <div class="background"><span><FontAwesomeIcon icon="comments" size="lg" />  {comment_Count} คำตอบ</span></div>
         <div>
           <AnswerCard comments={this.state.topic.comments} />
         </div>
