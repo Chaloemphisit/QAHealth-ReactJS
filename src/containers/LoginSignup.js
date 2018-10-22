@@ -39,7 +39,7 @@ export default class LoginSignup extends React.Component {
 
     handleChange = async (event) => {
         const { target } = event;
-        const value = target.type === 'checkbox' ? target.checked : target.value;
+        const value = target.type === 'checkbox' && target.validity.valid ? target.checked : target.value;
         const { name } = target;
         await this.setState({
             [name]: value,
@@ -52,7 +52,7 @@ export default class LoginSignup extends React.Component {
         return (
             <div id="login-signup-div" className="container-fluid">
                 <Row>
-                    <Col lg={{ size: 4, offset: 4}} md={{ size: 6, offset: 3 }} xs={12} sm={12}>
+                    <Col lg={{ size: 4, offset: 4 }} md={{ size: 6, offset: 3 }} xs={12} sm={12}>
                         <Card className="mt-3">
                             <CardBody>
                                 <div style={styles}>
@@ -151,6 +151,7 @@ export default class LoginSignup extends React.Component {
                                                             id="password"
                                                             placeholder="Password"
                                                             required
+                                                            pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
                                                             onChange={(e) => {
                                                                 this.handleChange(e)
                                                             }} />

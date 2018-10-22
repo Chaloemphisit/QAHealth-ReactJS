@@ -4,14 +4,14 @@ import { Switch, Route } from 'react-router-dom'
 import { Home, Page404, Ask, ContactUs, Topic, LoginSignup, UserProfile, EditProfile } from '../containers'
 
 export default () => (
-  <Switch>
-    <Route exact path="/" component={Home} />
-    <Route exact path="/ask" component={Ask} />
-    <Route exact path="/topic/:id" component={Topic}/>
-    <Route exact path="/contactus" component={ContactUs} />
-    <Route exact path="/login" component={LoginSignup} />
-    <Route exact path="/profile/:id" component={UserProfile} />
-    <Route exact path="/profile/:id/editProfile" component={EditProfile} />
+  <Switch >
+    <Route exact={true} path="/" component={Home} />
+    <Route  path="/ask" component={Ask} />
+    <Route path="/topic/:id" component={Topic} />
+    <Route path="/contactus" component={ContactUs} />
+    <Route path="/login" component={LoginSignup} />
+    <Route path="/profile/:id" component={UserProfile} />
+    <Route path="/profile/:id/editProfile" component={EditProfile} />
     <Route component={Page404} />
   </Switch>
 )

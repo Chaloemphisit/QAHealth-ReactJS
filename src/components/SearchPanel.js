@@ -4,7 +4,7 @@ import { Jumbotron, Container } from 'reactstrap';
 const SearchPanel = (props) => {
   return (
     <div>
-      <Jumbotron fluid class="align-items-center">
+      <Jumbotron fluid className="align-items-center">
         <Container fluid>
           <div >
             <fieldset className="field-container">

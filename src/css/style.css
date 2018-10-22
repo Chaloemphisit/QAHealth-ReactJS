@@ -1,8 +1,14 @@
 html,
 body {
+    background-color: #f0f2fa;
     height: 100%;
     /* margin: 0; */
 }
+.navbar-nav span[role=button] {
+    padding: 15px;
+    display: inline-block;
+    line-height: 20px;
+  }
 
 #login-signup-div {
     width: 100%;
@@ -142,6 +148,18 @@ div.background span {
     filter: drop-shadow(5px 5px 3px rgba(0, 0, 0, 0.2));
 }
 
+div.button3 {
+    width: auto;
+    height: auto;
+    display: inline-block;
+    padding: 0.3em 1.2em;
+    margin: 0 0.3em 0.3em 0;
+    border-radius: 2em;
+    box-sizing: border-box;
+    background-image: linear-gradient(to right, #fa709a 0%, #fee140 100%);
+    text-align: center;
+    transition: all 0.2s;
+}
 div.button3 {
     width: auto;
     height: auto;
