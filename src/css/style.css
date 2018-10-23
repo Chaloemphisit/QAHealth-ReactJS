@@ -99,6 +99,15 @@ div.background span {
     text-decoration: none;
 }
 
+#link-none-underline{
+    color: #f0f2fa;
+}
+
+#link-none-underline:hover{
+    color: #828282;
+    text-decoration: none;
+}
+
 /* Rounded Button */
 
 .back404page {

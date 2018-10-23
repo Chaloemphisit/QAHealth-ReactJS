@@ -5,7 +5,7 @@ import { Home, Page404, Ask, ContactUs, Topic, LoginSignup, UserProfile, EditPro
 
 export default () => (
   <Switch >
-    <Route exact={true} path="/" component={Home} />
+    <Route exact path="/" component={Home} />
     <Route  path="/ask" component={Ask} />
     <Route path="/topic/:id" component={Topic} />
     <Route path="/contactus" component={ContactUs} />

@@ -5,6 +5,7 @@ import {
 } from 'reactstrap';
 // import { Link } from 'react-router-dom';
 import { AvForm, AvField, AvRadioGroup, AvRadio } from 'availity-reactstrap-validation';
+// import axios from 'axios';
 
 export default class Ask extends React.Component {
   constructor(props) {
@@ -14,7 +15,7 @@ export default class Ask extends React.Component {
       detail: '',
       objective: '',
       questionType: '',
-      gender: '',
+      gender: '1',
       weight: '',
       height: '',
       birthDate: '',
@@ -32,8 +33,14 @@ export default class Ask extends React.Component {
     });
   }
 
-  submitQuestion() {
-    
+  handleSubmit = event => {
+    event.preventDefault();
+
+    // const ask = {
+    //   A: this.state.question
+    // };
+
+    console.log(this.state);
   }
 
 
@@ -46,7 +53,7 @@ export default class Ask extends React.Component {
         <Card outline color="info">
           <CardHeader style={{ backgroundColor: '#17A2B8', color: '#FFF' }} tag="h3">รายละเอียด</CardHeader>
           <CardBody>
-            <AvForm onSubmit={this.submitQuestion}>
+            <AvForm onSubmit={this.handleSubmit}>
               <AvField
                 label="คำถาม"
                 type="text"
@@ -96,19 +103,21 @@ export default class Ask extends React.Component {
                 validate={{
                   required: { value: true, errorMessage: 'กรุณาเลือกประเภทของคำถาม' }
                 }}>
-                <AvRadio customInput label="คำถามเฉพาะทางแพทย์" value="0" />
-                <AvRadio customInput label="คำถามเฉพาะทางเภสัชกร" value="1" />
+                <AvRadio customInput label="คำถามเฉพาะทางแพทย์" value="1" />
+                <AvRadio customInput label="คำถามเฉพาะทางเภสัชกร" value="2" />
               </AvRadioGroup>
               <Row form>
                 <legend>ข้อมูลผู้ป่วย</legend>
                 <Col md={2}>
-                  <AvField type="select" id="gender" name="gender" label="เพศ" helpMessage="กรุณาเลือกเพศของท่าน!">
+                  <AvField type="select" id="gender" name="gender" label="เพศ" helpMessage="กรุณาเลือกเพศของท่าน!"
                     value={gender}
-                    onChange={(e) => {
+                    onInput={(e) => {
                       this.handleChange(e)
                     }}
-                    <option>ชาย</option>
-                    <option>หญิง</option>
+                  >
+                    <option value="1">ชาย</option>
+                    <option value="2">หญิง</option>
+                    >
                   </AvField>
                 </Col>
                 <Col md={3}>
