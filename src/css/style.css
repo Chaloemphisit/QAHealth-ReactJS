@@ -4,11 +4,17 @@ body {
     height: 100%;
     /* margin: 0; */
 }
+
 .navbar-nav span[role=button] {
     padding: 15px;
     display: inline-block;
     line-height: 20px;
-  }
+}
+
+.active {
+    color: #FFFFFF;
+}
+
 
 #login-signup-div {
     width: 100%;
@@ -18,16 +24,17 @@ body {
     background-size: cover;
 }
 
-.topic-text-header{
+.topic-text-header {
     font-size: 1.1em;
 }
-.topic-text-body{
+
+.topic-text-body {
     font-size: 1.0em;
     color: #828282;
     margin-left: 10px;
 }
 
-.rowMargin{
+.rowMargin {
     /* margin-top: 2%; */
     margin-bottom: 1%;
 }
@@ -90,20 +97,17 @@ div.background span {
     /* border-color: #E7E7E7; */
 }
 
-.link-none-underline {
-    color: #FFFFFF;
-}
 
 .link-none-underline:hover {
-    color: #FFFFFF;
+    /* color: #FFFFFF; */
     text-decoration: none;
 }
 
-#link-none-underline{
+#link-none-underline {
     color: #f0f2fa;
 }
 
-#link-none-underline:hover{
+#link-none-underline:hover {
     color: #828282;
     text-decoration: none;
 }
@@ -169,6 +173,7 @@ div.button3 {
     text-align: center;
     transition: all 0.2s;
 }
+
 div.button3 {
     width: auto;
     height: auto;

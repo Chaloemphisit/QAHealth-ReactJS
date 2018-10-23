@@ -51,16 +51,16 @@ class App extends Component {
           <Collapse isOpen={this.state.isOpen} navbar>
             <Nav className="ml-auto" navbar >
               <NavItem>
-                <Link to="/" id="link-none-underline" onClick={this.closeNav}><span className="nav-link" >หน้าหลัก</span></Link>
+                <Link to="/" id="link-none-underline" onClick={this.closeNav}><span className={window.location.pathname === '/' ? "nav-link active" : "nav-link"} >หน้าหลัก</span></Link>
               </NavItem>
               <NavItem>
-                <Link to="/ask" id="link-none-underline" onClick={this.closeNav}><span className="nav-link">ถามหมอ</span></Link>
+                <Link to="/ask" id="link-none-underline" onClick={this.closeNav}><span className={window.location.pathname === '/ask' ? "nav-link active" : "nav-link"}>ถามหมอ</span></Link>
               </NavItem>
               <NavItem>
-                <Link to="/contactus" id="link-none-underline" onClick={this.closeNav}><span className="nav-link"  >ติดต่อเรา</span></Link>
+                <Link to="/contactus" id="link-none-underline" onClick={this.closeNav}><span className={window.location.pathname === '/contactus' ? "nav-link active" : "nav-link"}  >ติดต่อเรา</span></Link>
               </NavItem>
               <NavItem>
-                <Link to="/login" id="link-none-underline" onClick={this.closeNav}><span className="nav-link" >Log In/Sign Up</span></Link>
+                <Link to="/login" id="link-none-underline" onClick={this.closeNav}><span className={window.location.pathname === '/login' ? "nav-link active" : "nav-link"} >Log In/Sign Up</span></Link>
               </NavItem>
               <UncontrolledDropdown nav inNavbar active={true}>
                 <DropdownToggle nav caret>
