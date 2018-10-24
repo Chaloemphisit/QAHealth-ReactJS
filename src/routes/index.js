@@ -11,7 +11,7 @@ export default () => (
     <Route path="/contactus" component={ContactUs} />
     <Route path="/login" component={LoginSignup} />
     <Route path="/profile/:id" component={UserProfile} />
-    <Route path="/profile/:id/editProfile" component={EditProfile} />
+    <Route path="/editProfile" component={EditProfile} />
     <Route component={Page404} />
   </Switch>
 )
