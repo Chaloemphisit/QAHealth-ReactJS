@@ -31,9 +31,9 @@ class QuestionTabs extends React.Component {
         this.setState({ isLoading: true });
 
         axios.all([
-            axios.get('http://localhost:8080/api/home/getTopics'),
-            axios.get('http://localhost:8080/api/home/getTopicsAns'),
-            axios.get('http://localhost:8080/api/home/getTopicsNoAns')
+            axios.get('https://health-qa-api.herokuapp.com/api/home/getTopics'),
+            axios.get('https://health-qa-api.herokuapp.com/api/home/getTopicsAns'),
+            axios.get('https://health-qa-api.herokuapp.com/api/home/getTopicsNoAns')
         ])
             .then(axios.spread((allTopicsRes, ansTopicsRes, noAnsTopicRes) => {
                 this.setState({
