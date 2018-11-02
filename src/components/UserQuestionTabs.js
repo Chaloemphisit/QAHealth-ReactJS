@@ -12,8 +12,7 @@ class UserQuestionTabs extends React.Component {
 
         this.state = {
             questions: {
-                allQuestion: [],
-                answerQuestion: [],
+                allQuestion: []
             },
             isLoading: false,
             error: null
@@ -47,7 +46,6 @@ class UserQuestionTabs extends React.Component {
                     <Tabs activeTab={{ id: "tab1" }}>
                         <Tabs.Tab id="tab1" ><div className="mt-3" > <QuestionsList /></div> </Tabs.Tab>
                         <Tabs.Tab id="tab2" ><div className="mt-3"> <QuestionsList /></div> </Tabs.Tab>
-                        <Tabs.Tab id="tab3" > <div className="mt-3"><QuestionsList /></div></Tabs.Tab>
                     </Tabs>
                 </div>
             );
@@ -64,25 +62,6 @@ class UserQuestionTabs extends React.Component {
                             <div className="mt-3" >
                                 {
                                     this.state.questions.allQuestion.map(
-                                        (question, index) =>
-                                            < ListGroup key={index}>
-                                                <ListGroupItem>
-                                                    <ListGroupItemHeading ><Link to={"/topic/"+question.id} className="question-header">{question.question_Header}</Link></ListGroupItemHeading>
-                                                    <ListGroupItemText>
-                                                        <Link to={"/topic/"+question.id} className="question-body">
-                                                            {question.description}
-                                                        </Link>
-                                                    </ListGroupItemText>
-                                                </ListGroupItem>
-                                            </ListGroup >
-                                    )
-                                }
-                            </div>
-                        </Tabs.Tab>
-                        <Tabs.Tab id="tab2" title="คำถามที่ฉันตอบ">
-                            <div className="mt-3">
-                                {
-                                    this.state.questions.answerQuestion.map(
                                         (question, index) =>
                                             < ListGroup key={index}>
                                                 <ListGroupItem>

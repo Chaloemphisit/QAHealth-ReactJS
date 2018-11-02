@@ -11,7 +11,6 @@ import Skeleton from 'react-loading-skeleton';
 export default class Topic extends React.Component {
   constructor(props) {
     super(props);
-
     this.state = {
       topic: {
         id: '',
@@ -71,7 +70,7 @@ export default class Topic extends React.Component {
 
               </Col>
               <Col md={2} xs={2} sm={2}>
-                <Link to={"/spam/" + id} ><a href="/" className="float-right" id="trash"> <FontAwesomeIcon icon="trash-alt" /></a>
+                <Link to={"/spam/" + id} ><div href="/" className="float-right" id="trash"> <FontAwesomeIcon icon="trash-alt" /></div>
                   <UncontrolledTooltip placement="right" target="trash">แจ้งลบ</UncontrolledTooltip>
                 </Link>
               </Col>
@@ -143,7 +142,7 @@ export default class Topic extends React.Component {
           <Answer />
         </Row>
 
-        <div class="background"><span><FontAwesomeIcon icon="comments" size="lg" />  {comment_Count} คำตอบ</span></div>
+        <div className="background"><span><FontAwesomeIcon icon="comments" size="lg" />  {comment_Count} คำตอบ</span></div>
         <div>
           <AnswerCard comments={this.state.topic.comments} />
         </div>

@@ -10,8 +10,8 @@ export default () => (
     <Route path="/topic/:id" component={Topic} />
     <Route path="/contactus" component={ContactUs} />
     <Route path="/login" component={LoginSignup} />
-    <Route path="/profile/:id" component={UserProfile} />
-    <Route path="/editProfile" component={EditProfile} />
+    <Route path="/profile/:id" component={UserProfile}/>
+    <Route path="/editProfile/:id" component={EditProfile} />
     <Route component={Page404} />
   </Switch>
 )

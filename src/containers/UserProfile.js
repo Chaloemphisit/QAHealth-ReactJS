@@ -19,7 +19,7 @@ export default class LoginSignup extends React.Component {
                             <Row>
                                 <Col md={4} sm={12} xs={12} align="center">
                                     <FontAwesomeIcon className="align-items-center" icon="user-circle" size="10x" color="#17A2B8" />
-                                    <h4 className="mt-3"><Link to="/editProfile"><Button outline color="info">แก้ไขโปรไฟล์</Button>{' '}</Link></h4>
+                                    <h4 className="mt-3"><Link to={"/editProfile/"+this.props.match.params.id}><Button outline color="info">แก้ไขโปรไฟล์</Button>{' '}</Link></h4>
                                 </Col>
                                 <Col md={8} sm={12} xs={12} className="mt-4">
                                     <Row >
