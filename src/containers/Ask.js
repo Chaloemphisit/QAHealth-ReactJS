@@ -10,6 +10,7 @@ import { AvForm, AvField, AvRadioGroup, AvRadio } from 'availity-reactstrap-vali
 export default class Ask extends React.Component {
   constructor(props) {
     super(props);
+    this.handleBirthdayChange = this.handleBirthdayChange.bind(this);
     this.state = {
       question: '',
       detail: '',
@@ -18,7 +19,9 @@ export default class Ask extends React.Component {
       gender: '1',
       weight: '',
       height: '',
-      birthDate: '',
+      ageY: '0',
+      ageM: '0',
+      ageD: '0',
       congenitalDisease: ''
     }
   }
@@ -33,12 +36,44 @@ export default class Ask extends React.Component {
     });
   }
 
+  handleBirthdayChange = (event) => {
+    const { target } = event;
+    var mdate = target.value;
+    var yearThen = parseInt(mdate.substring(0,4), 10);
+    var monthThen = parseInt(mdate.substring(5,7), 10);
+    var dayThen = parseInt(mdate.substring(8,10), 10);
+
+    var bthDate, curDate, days;
+    var ageYears, ageMonths, ageDays;
+    bthDate = new Date(yearThen, monthThen-1, dayThen);
+    curDate = new Date();
+    if (bthDate > curDate) return;
+    days = Math.floor((curDate - bthDate) / (1000 * 60 * 60 * 24));
+    ageYears = Math.floor(days / 365);
+    ageMonths = Math.floor((days % 365) / 31);
+    ageDays = days - (ageYears * 365) - (ageMonths * 31);
+    if (ageYears > 0) {
+      this.setState({ AgeY: ageYears })
+      // console.log(ageYears)
+    }
+    if (ageMonths > 0) {
+      this.setState({ AgeM: ageMonths })
+      // console.log(ageMonths)
+    }
+    if (ageDays > 0) {
+      this.setState({ AgeD: ageDays })
+      // console.log(ageDays)
+    }
+
+  }
+
   handleSubmit = event => {
     event.preventDefault();
 
     // const ask = {
     //   A: this.state.question
     // };
+
 
     console.log(this.state);
   }
@@ -154,7 +189,7 @@ export default class Ask extends React.Component {
                   <AvField name="birthDate" id="birthDate" label="วันเกิด" type="date"
                     value={birthDate}
                     onInput={(e) => {
-                      this.handleChange(e)
+                      this.handleBirthdayChange(e)
                     }}
                     validate={{
                       required: { value: true, errorMessage: 'กรุณาระบุวันเกิด' }

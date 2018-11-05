@@ -94,11 +94,11 @@ class QuestionTabs extends React.Component {
                                         (question, index) =>
                                             < ListGroup key={index} >
                                                 <ListGroupItem>
-                                                    <ListGroupItemHeading ><Link to={"/topic/" + question.head_topic_id} className="question-header">{question.topic_name}</Link><Badge style={{ marginLeft: '2%' }} pill> ตอบแล้ว {question.answer}</Badge></ListGroupItemHeading>
-                                                    <Label style={{ color: '#6C757D' }}> <FontAwesomeIcon icon="question" size="sm" />{"" + question.question_type}</Label>
+                                                    <ListGroupItemHeading ><Link to={"/topic/" + question.topicId} className="question-header">{question.topicName}</Link><Badge style={{ marginLeft: '2%' }} pill> ตอบแล้ว {question.answerCount}</Badge></ListGroupItemHeading>
+                                                    <Label style={{ color: '#6C757D' }}> <FontAwesomeIcon icon="question" size="sm" />{"" + question.questionType}</Label>
                                                     <ListGroupItemText>
-                                                        <Link to={"topic/" + question.head_topic_id} className="question-body">
-                                                            {question.topic_text}
+                                                        <Link to={"topic/" + question.topicId} className="question-body">
+                                                            {question.topicText}
                                                         </Link>
                                                     </ListGroupItemText>
                                                 </ListGroupItem>
@@ -114,11 +114,11 @@ class QuestionTabs extends React.Component {
                                         (question, index) =>
                                             < ListGroup key={index}>
                                                 <ListGroupItem>
-                                                    <ListGroupItemHeading ><Link to={"/topic/" + question.head_topic_id} className="question-header">{question.topic_name}</Link><Badge style={{ marginLeft: '2%' }} pill> ตอบแล้ว {question.answer}</Badge></ListGroupItemHeading>
-                                                    <Label style={{ color: '#6C757D' }}> <FontAwesomeIcon icon="question" size="sm" />{"" + question.question_type}</Label>
+                                                    <ListGroupItemHeading ><Link to={"/topic/" + question.topicId} className="question-header">{question.topicName}</Link><Badge style={{ marginLeft: '2%' }} pill> ตอบแล้ว {question.answerCount}</Badge></ListGroupItemHeading>
+                                                    <Label style={{ color: '#6C757D' }}> <FontAwesomeIcon icon="question" size="sm" />{"" + question.questionType}</Label>
                                                     <ListGroupItemText>
-                                                        <Link to={"/topic/" + question.head_topic_id} className="question-body">
-                                                            {question.topic_text}
+                                                        <Link to={"/topic/" + question.topicId} className="question-body">
+                                                            {question.topicText}
                                                         </Link>
                                                     </ListGroupItemText>
                                                 </ListGroupItem>
@@ -134,11 +134,11 @@ class QuestionTabs extends React.Component {
                                         (question, index) =>
                                             < ListGroup key={index}>
                                                 <ListGroupItem>
-                                                    <ListGroupItemHeading ><Link to={"/topic/" + question.head_topic_id} className="question-header">{question.topic_name}</Link><Badge style={{ marginLeft: '2%' }} pill> ตอบแล้ว {question.answer}</Badge></ListGroupItemHeading>
-                                                    <Label style={{ color: '#6C757D' }}> <FontAwesomeIcon icon="question" size="sm" />{"" + question.question_type}</Label>
+                                                    <ListGroupItemHeading ><Link to={"/topic/" + question.topicId} className="question-header">{question.topicName}</Link><Badge style={{ marginLeft: '2%' }} pill> ตอบแล้ว {question.answerCount}</Badge></ListGroupItemHeading>
+                                                    <Label style={{ color: '#6C757D' }}> <FontAwesomeIcon icon="question" size="sm" />{"" + question.questionType}</Label>
                                                     <ListGroupItemText>
-                                                        <Link to={"/topic/" + question.head_topic_id} className="question-body">
-                                                            {question.topic_text}
+                                                        <Link to={"/topic/" + question.topicId} className="question-body">
+                                                            {question.topicText}
                                                         </Link>
                                                     </ListGroupItemText>
                                                 </ListGroupItem>
